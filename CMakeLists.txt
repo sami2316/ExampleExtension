@@ -45,7 +45,7 @@ else ()
 endif ()
 
 set(SRCS
-    src/example_extension.cpp
+    src/sdk_example.cpp
 )
 
 
