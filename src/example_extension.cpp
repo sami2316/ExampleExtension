@@ -93,7 +93,7 @@ REGISTER_EXTERNAL(ExampleTable, "table", "example");
 REGISTER_EXTERNAL(ComplexExampleTable, "table", "complex_example");
 
 int main(int argc, char* argv[]) {
-  std::string kPath = "/usr/local/etc/broker.ini";
+  std::string kPath = "/usr/local/etc";
   osquery::Initializer runner(argc, argv, OSQUERY_EXTENSION);
   LOG(WARNING) << "Osquery Initialized";
   //just calling an osquery sdk function

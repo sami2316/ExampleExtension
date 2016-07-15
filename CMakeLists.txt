@@ -33,8 +33,7 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     set(LINK_LIBS ${LINK_LIBS} "-lpthread")
 
     # TODO: Better ways to handle these?
-    set(LINK_LIBS ${LINK_LIBS} "-lthrift -lcrypto -ldl -lboost_filesystem -lboost_system -lrocksdb") 
-#"-lboost_thread -lboost_system -lboost_filesystem -lthrift -lcrypto -ldl -lglog -lthriftz -lgflags -lrocksdb -lz -lbz2 -lsnappy")
+    set(LINK_LIBS ${LINK_LIBS} "-lboost_thread -lboost_system -lboost_filesystem -lthrift -lcrypto -ldl -lglog -lthriftz -lgflags -lrocksdb -lz -lbz2 -lsnappy")
 
 elseif (${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
     message(FATAL_ERROR "FreeBSD not yet tried.")
