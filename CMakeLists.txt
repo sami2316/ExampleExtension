@@ -14,13 +14,12 @@ project(example_extension)
 set(TARGET example_extension.ext)
 
 find_package(Osquery REQUIRED)
-find_package(Glog REQUIRED)
 
 include_directories(BEFORE ${OSQUERY_INCLUDE_DIRS})
 include_directories(BEFORE ${CMAKE_CURRENT_SOURCE_DIR}/src)
 include_directories(BEFORE ${CMAKE_BINARY_DIR}/src)
 
-set(LINK_LIBS ${LINK_LIBS}  ${OSQUERY_LIBRARY} ${GLOG_LIBRARY})
+set(LINK_LIBS ${LINK_LIBS}  ${OSQUERY_LIBRARY} )
 
 set(CMAKE_CXX_FLAGS "-I ${OSQUERY_INCLUDE_DIR} -I ${GLOG_INCLUDE_DIR} ${CMAKE_CXX_FLAGS}")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
